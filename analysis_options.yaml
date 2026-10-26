@@ -1,0 +1,3 @@
+# Standard Flutter lint set. Anything it reports is an "info" suggestion,
+# not an error - the app still builds and runs.
+include: package:flutter_lints/flutter.yaml

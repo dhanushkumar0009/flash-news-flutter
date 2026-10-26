@@ -1,0 +1,11 @@
+{
+  "name": "Flash News",
+  "short_name": "Flash News",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#be123c",
+  "description": "Flash News - headlines, fast.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Flash News - headlines, fast.">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Flash News">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#BE123C">
+
+  <link rel="manifest" href="manifest.json">
+
+  <title>Flash News</title>
+
+  <style>
+    /* Shown while the Flutter engine downloads, so the first paint is not a
+       blank white page. */
+    body {
+      margin: 0;
+      background: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    #boot {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: #475569;
+    }
+
+    #boot .mark {
+      width: 58px;
+      height: 58px;
+      border-radius: 15px;
+      background: #be123c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 30px;
+      font-weight: 800;
+    }
+
+    #boot .name {
+      font-size: 19px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.3px;
+    }
+
+    #boot .hint { font-size: 13px; }
+
+    @media (prefers-color-scheme: dark) {
+      body { background: #0f1115; }
+      #boot { color: #a2a9b4; }
+      #boot .name { color: #e8eaed; }
+    }
+  </style>
+</head>
+<body>
+  <div id="boot">
+    <div class="mark">&#9889;</div>
+    <div class="name">Flash News</div>
+    <div class="hint">Loading&hellip;</div>
+  </div>
+
+  <script>
+    // Remove the placeholder once Flutter has painted its first frame.
+    window.addEventListener('flutter-first-frame', function () {
+      var boot = document.getElementById('boot');
+      if (boot) boot.remove();
+    });
+  </script>
+
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
